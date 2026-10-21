@@ -76,7 +76,7 @@ export default function ContactPage({ onOpenQuoteModal }) {
                   </div>
                   <div>
                     <div className="font-bold text-slate-900">Base of Operations</div>
-                    <div className="text-sm text-slate-800">Lexington, SC 29072</div>
+                    <div className="text-sm text-slate-800">{companyConfig.address}</div>
                     <div className="text-xs text-slate-500">Serving all of Lake Murray & the Midlands</div>
                   </div>
                 </div>

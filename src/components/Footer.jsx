@@ -55,7 +55,7 @@ export default function Footer({ onNavigate, onOpenQuoteModal }) {
             <div className="space-y-2 text-xs text-slate-300 pt-2">
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4 text-[#8ce03f] flex-shrink-0" />
-                <span>Based in Lexington, SC 29072 (Lake Murray Area)</span>
+                <span>{companyConfig.address}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Clock className="w-4 h-4 text-[#8ce03f] flex-shrink-0" />

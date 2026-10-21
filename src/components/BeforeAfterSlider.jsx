@@ -99,8 +99,8 @@ export default function BeforeAfterSlider({
           className="absolute inset-0 w-full h-full bg-cover bg-center flex items-center justify-end p-6"
           style={{
             backgroundImage: activeProject === 'lawn' 
-              ? 'url("/images/hero-reference.jpg")' 
-              : 'url("/images/hero-reference.jpg")',
+              ? 'url("/images/top-down-lawn.jpeg")' 
+              : 'url("/images/pressure-washing.jpeg")',
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
@@ -122,7 +122,9 @@ export default function BeforeAfterSlider({
           <div 
             className="absolute inset-0 w-full h-full bg-cover bg-center filter sepia brightness-[0.75] contrast-[0.9]"
             style={{
-              backgroundImage: 'url("/images/hero-reference.jpg")',
+              backgroundImage: activeProject === 'lawn' 
+                ? 'url("/images/top-down-lawn.jpeg")' 
+                : 'url("/images/pressure-washing.jpeg")',
               width: '100%',
               minWidth: '100%',
             }}

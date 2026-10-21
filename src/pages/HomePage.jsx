@@ -94,19 +94,19 @@ export default function HomePage({ onNavigate, onOpenQuoteModal }) {
               </div>
             </div>
 
-            {/* Right Hero Column: Pristine Home Image with Instant Quote Overlay Card (Mockup 1) */}
+            {/* Right Hero Column: Pristine Lawn Photo with Instant Quote Overlay Card (Mockup 1) */}
             <div className="lg:col-span-6 relative flex justify-center lg:justify-end">
-              {/* Background House & Striped Lawn Container */}
-              <div className="relative w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+              {/* Background Striped Lawn Photo Container */}
+              <div className="relative w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900">
                 <img
-                  src="/images/hero-reference.jpg"
-                  alt="Beautiful suburban home in Lexington SC with striped green lawn"
-                  className="w-full h-[520px] object-cover filter brightness-[0.98]"
+                  src="/images/lawn-mowing.jpeg"
+                  alt="Professional lawn care and mowing in Lexington SC"
+                  className="absolute inset-0 w-full h-full object-cover filter brightness-[0.85]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent pointer-events-none"></div>
 
-                {/* Floating Instant Quote Card anchored within/over the image */}
-                <div className="absolute inset-0 p-4 sm:p-6 flex items-center justify-center sm:justify-end overflow-y-auto">
+                {/* Floating Instant Quote Card anchored over the lawn image */}
+                <div className="relative z-10 p-3 sm:p-6 flex items-center justify-center">
                   <InstantQuoteCard />
                 </div>
               </div>
