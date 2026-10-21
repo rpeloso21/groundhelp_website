@@ -1,0 +1,13 @@
+Your homepage needs to act as a funnel. Arrange your 6 main page sections in this specific order to maximize conversions:
+
+1. Hero Section (The Split): Your navbar, a bold headline on the left, and your Instant Quote Form on the right (exactly like your first mockup).
+
+2. The Trust Banner: A narrow, clean banner right below the fold showing quick credentials (e.g., Licensed & Insured, 5-Star Rated, Local & Family Owned).
+
+3. Core Services Grid: A 3 or 4-card preview of your main offerings (Mowing, Aeration, Weed Control) with buttons linking to your main Services sub-page.
+
+4. How It Works: A simple, 3-step visual guide showing how easy it is to work with you (e.g., 1. Request a Quote -> 2. Schedule Your Day -> 3. Enjoy Your Perfect Lawn).
+
+5. Social Proof / Testimonials: A clean section showcasing 3-4 glowing reviews from local customers with star ratings.
+
+6. Footer: The bottom anchor containing your Contact Info, working hours, a mini service-area list, and social media links.

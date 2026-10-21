@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+/* Custom modern scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Subtle glow animations */
+.glow-on-hover:hover {
+  box-shadow: 0 0 25px rgba(140, 224, 63, 0.4);
+}
+
+/* Striped grass pattern effect for aesthetic accents */
+.grass-stripes-bg {
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(140, 224, 63, 0.04),
+    rgba(140, 224, 63, 0.04) 20px,
+    rgba(140, 224, 63, 0.08) 20px,
+    rgba(140, 224, 63, 0.08) 40px
+  );
+}
