@@ -1,5 +1,5 @@
 export const companyConfig = {
-  name: "Ground Help",
+  name: "GroundHelp",
   brandName: "GroundHelp",
   tagline: "Professional Lawn Care, Unmatched Results.",
   subTagline: "Reliable, recurring lawn maintenance, seasonal landscape care, exterior pressure washing, and dedicated residential cleaning across Lexington, SC & Lake Murray.",
@@ -83,11 +83,12 @@ export const companyConfig = {
       shortTitle: "GroundHelpClean",
       category: "Interior Cleaning",
       isDedicatedCrew: true,
-      badge: "Dedicated Cleaning Crew",
-      headline: "Total home care from the yard to the living room with our specialized indoor team.",
-      description: "GroundHelpClean operates as a dedicated, fully independent residential cleaning division. Never the lawn crew — your home is cared for by vetted, trained indoor cleaning specialists with hospital-grade vacuums and eco-friendly supplies.",
+      isComingSoon: true,
+      badge: "Coming Soon",
+      headline: "Coming Soon: Total home care from the yard to the living room with our specialized indoor team.",
+      description: "GroundHelpClean is currently preparing to launch as our dedicated residential cleaning division in Lexington & Lake Murray. Never the lawn crew — your home will be cared for by vetted, trained indoor cleaning specialists with hospital-grade vacuums and eco-friendly supplies. Join the waitlist today for priority launch access!",
       crewPledge: "100% separate indoor division. Background-checked, bonded, insured, and meticulously trained cleaning professionals.",
-      bundleDiscount: "Save 10% on your recurring lawn care when you bundle bi-weekly or monthly GroundHelpClean residential maid service!",
+      bundleDiscount: "Save 10% on your recurring lawn care when you bundle bi-weekly or monthly GroundHelpClean residential maid service upon launch!",
       features: [
         "Dedicated indoor cleaning specialists (strictly separate from yard crews)",
         "Recurring maid service (weekly, bi-weekly, or monthly)",
@@ -96,7 +97,7 @@ export const companyConfig = {
         "HEPA-filter filtration vacuums & pet-safe, non-toxic sanitizers",
         "Consistent cleaning crews who know your personal preferences"
       ],
-      startingAt: "$135 / clean"
+      startingAt: "Coming Soon (Join Waitlist)"
     },
     commercialHoa: {
       id: "commercial-hoa",
@@ -120,7 +121,7 @@ export const companyConfig = {
       shortTitle: "Christmas Lights",
       category: "Seasonal Services",
       headline: "Custom-fit commercial LED lighting, professional installation, in-season maintenance, and post-holiday removal.",
-      description: "Take the hazard and hassle out of the holidays. Ground Help provides complete, professional Christmas lighting solutions for Lexington homes and businesses — custom cut to your roofline, safely installed, maintained all season, and neatly taken down and stored.",
+      description: "Take the hazard and hassle out of the holidays. GroundHelp provides complete, professional Christmas lighting solutions for Lexington homes and businesses — custom cut to your roofline, safely installed, maintained all season, and neatly taken down and stored.",
       features: [
         "Custom commercial-grade LED lighting tailored to your roofline & gutters",
         "All hardware, commercial extension cords, and automatic timers included",
@@ -157,7 +158,7 @@ export const companyConfig = {
   faqs: [
     {
       question: "Are your lawn care and indoor cleaning crews the same people?",
-      answer: "No, absolutely not! GroundHelpClean is a dedicated indoor division with specialized residential cleaning technicians. They drive separate vehicles, use hospital-grade indoor HEPA equipment and non-toxic cleaning products, and are specifically trained in meticulous interior home care. You get the convenience of one trusted local company with dedicated specialists for each job."
+      answer: "No, absolutely not! GroundHelpClean is launching soon as an independent, dedicated indoor division with specialized residential cleaning technicians. They will drive separate vehicles, use hospital-grade indoor HEPA equipment and non-toxic cleaning products, and are specifically trained in meticulous interior home care. You get the convenience of one trusted local company with dedicated specialists for each job."
     },
     {
       question: "How does the 'Instant Quote' work?",

@@ -13,7 +13,8 @@ import {
   MapPin, 
   Users, 
   Layers,
-  Droplets
+  Droplets,
+  Building2
 } from 'lucide-react';
 import InstantQuoteCard from '../components/InstantQuoteCard';
 import ServiceCard from '../components/ServiceCard';
@@ -198,6 +199,32 @@ export default function HomePage({ onNavigate, onOpenQuoteModal }) {
             Explore Landscape Services →
           </button>
         </div>
+
+        {/* Neighborhood Group Discount Callout */}
+        <div className="mt-5 p-5 sm:p-6 rounded-2xl bg-[#f2fce2] border border-[#bbf7d0] max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex items-center space-x-4">
+            <div className="w-11 h-11 rounded-xl bg-[#8ce03f] text-[#141f17] flex items-center justify-center font-bold text-lg flex-shrink-0 shadow-sm">
+              <Users className="w-5 h-5" />
+            </div>
+            <div>
+              <div className="flex items-center space-x-2">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#28581c] bg-white px-2.5 py-0.5 rounded-full border border-[#bbf7d0]">
+                  Neighborhood Route Discount
+                </span>
+                <span className="text-xs font-bold text-[#28581c]">Save 10% – 15%</span>
+              </div>
+              <p className="text-xs sm:text-sm text-slate-700 mt-1">
+                Have <strong>3 or more neighbors</strong> on your Lexington street or cul-de-sac? Coordinate service on the same route day and everyone gets our group discount.
+              </p>
+            </div>
+          </div>
+          <button
+            onClick={() => onOpenQuoteModal('lawn-maintenance')}
+            className="text-xs font-bold text-[#141f17] bg-[#8ce03f] hover:bg-[#7ecc34] px-5 py-2.5 rounded-xl transition-colors whitespace-nowrap shadow-sm"
+          >
+            Inquire For Your Street →
+          </button>
+        </div>
       </section>
 
       {/* =========================================================================
@@ -220,7 +247,7 @@ export default function HomePage({ onNavigate, onOpenQuoteModal }) {
               </h2>
 
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                Take the hazard and hassle out of the holidays. Ground Help provides complete, hands-off holiday lighting for Lexington homes and businesses — custom cut to your roofline, safely installed, maintained all season, and neatly taken down and stored.
+                Take the hazard and hassle out of the holidays. GroundHelp provides complete, hands-off holiday lighting for Lexington homes and businesses — custom cut to your roofline, safely installed, maintained all season, and neatly taken down and stored.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs text-slate-200">
@@ -388,7 +415,7 @@ export default function HomePage({ onNavigate, onOpenQuoteModal }) {
                   Maintain Community Value & Commercial Curb Appeal
                 </h3>
                 <p className="text-sm text-slate-600 leading-relaxed">
-                  Ground Help partners with subdivision HOA boards, business parks, and retail centers throughout Lexington and Lake Murray. From common area turf mowing and retention pond edging to neighborhood group discounts.
+                  GroundHelp partners with subdivision HOA boards, business parks, and retail centers throughout Lexington and Lake Murray. From common area turf mowing and retention pond edging to complete grounds contracts.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs text-slate-700">
@@ -398,7 +425,7 @@ export default function HomePage({ onNavigate, onOpenQuoteModal }) {
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle2 className="w-4 h-4 text-[#8ce03f]" />
-                    <span>Neighborhood Group Rate Program (10-15% Off)</span>
+                    <span>Monument Bed Seasonal Color Rotations</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle2 className="w-4 h-4 text-[#8ce03f]" />
@@ -428,18 +455,28 @@ export default function HomePage({ onNavigate, onOpenQuoteModal }) {
 
               <div className="lg:col-span-5 bg-gradient-to-br from-[#141f17] to-[#1c3024] text-white p-6 sm:p-7 rounded-2xl shadow-md space-y-4">
                 <div className="flex items-center space-x-2 text-[#8ce03f]">
-                  <Users className="w-5 h-5" />
-                  <span className="font-bold text-sm">Neighborhood Group Discount</span>
+                  <Building2 className="w-5 h-5" />
+                  <span className="font-bold text-sm">Commercial & HOA Proposals</span>
                 </div>
-                <h4 className="text-xl font-bold text-white">Do 3+ Neighbors Want Service?</h4>
+                <h4 className="text-xl font-bold text-white">Need Grounds Bids for Your Board?</h4>
                 <p className="text-xs text-slate-300 leading-relaxed">
-                  When 3 or more neighbors on your Lexington street or cul-de-sac sign up for weekly lawn care or driveway pressure washing on the same day, everyone receives our special <strong>Neighborhood Route Discount</strong>!
+                  We provide itemized RFP proposals, on-site walkthroughs, and dependable scheduled commercial routes with dedicated account management for Lexington communities and properties.
                 </p>
+                <div className="space-y-2 text-xs text-slate-300 pt-1">
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#8ce03f]" />
+                    <span>$2M Commercial General Liability</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#8ce03f]" />
+                    <span>Workers' Compensation Insured</span>
+                  </div>
+                </div>
                 <button
                   onClick={() => onNavigate('commercial')}
                   className="w-full bg-[#8ce03f] hover:bg-[#7ecc34] text-[#141f17] font-bold py-2.5 rounded-xl text-xs transition-colors"
                 >
-                  Inquire About Your Neighborhood
+                  Submit Commercial Bid Request →
                 </button>
               </div>
             </div>
@@ -459,7 +496,7 @@ export default function HomePage({ onNavigate, onOpenQuoteModal }) {
             Trusted by Homeowners Across the Midlands
           </h2>
           <p className="text-sm text-slate-600 mt-2">
-            Hear from local residents and HOA presidents who rely on Ground Help.
+            Hear from local residents and HOA presidents who rely on GroundHelp.
           </p>
         </div>
 

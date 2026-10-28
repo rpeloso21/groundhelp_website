@@ -75,9 +75,9 @@ export default function GroundHelpCleanPage({ onOpenQuoteModal, onNavigate }) {
         {/* Hero Banner with Distinct Indoor Aesthetic */}
         <div className="bg-gradient-to-br from-[#122417] via-[#16301f] to-[#1c3f29] rounded-3xl text-white p-8 sm:p-14 shadow-2xl border border-[#2b4d34] mb-16 relative overflow-hidden">
           <div className="relative z-10 max-w-3xl space-y-6">
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-[#8ce03f]/20 border border-[#8ce03f]/40 text-[#8ce03f] text-xs font-bold uppercase tracking-wider">
-              <Sparkles className="w-4 h-4 text-[#8ce03f]" />
-              <span>Independent Residential Division • GroundHelpClean</span>
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-amber-400/20 border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider">
+              <Sparkles className="w-4 h-4 text-amber-300 animate-pulse" />
+              <span>🚀 Coming Soon • GroundHelpClean Interior Division</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
@@ -86,7 +86,7 @@ export default function GroundHelpCleanPage({ onOpenQuoteModal, onNavigate }) {
             </h1>
 
             <p className="text-base sm:text-lg text-slate-200 leading-relaxed">
-              GroundHelpClean is our dedicated residential cleaning division. Designed as an additional, premium service for Lexington and Lake Murray homeowners who want total home care from one reliable local brand.
+              GroundHelpClean is our upcoming dedicated residential cleaning division. Currently in preparation and team training, we will soon bring total home care to Lexington and Lake Murray homeowners from one trusted local brand.
             </p>
 
             {/* Crew Separation Guarantee Pill */}
@@ -109,7 +109,7 @@ export default function GroundHelpCleanPage({ onOpenQuoteModal, onNavigate }) {
                 onClick={() => onOpenQuoteModal('ground-help-clean')}
                 className="bg-[#8ce03f] hover:bg-[#7ecc34] text-[#141f17] font-bold px-7 py-3.5 rounded-xl text-sm transition-all shadow-lg flex items-center space-x-2"
               >
-                <span>Book GroundHelpClean</span>
+                <span>Join Launch Waitlist</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
 
@@ -177,7 +177,7 @@ export default function GroundHelpCleanPage({ onOpenQuoteModal, onNavigate }) {
                   onClick={() => onOpenQuoteModal('ground-help-clean')}
                   className="w-full bg-[#141f17] hover:bg-[#1f3124] text-white font-bold py-2.5 rounded-xl text-xs transition-colors"
                 >
-                  Schedule Recurring Clean
+                  Join Waitlist (Recurring Clean)
                 </button>
               </div>
             </div>
@@ -218,7 +218,7 @@ export default function GroundHelpCleanPage({ onOpenQuoteModal, onNavigate }) {
                   onClick={() => onOpenQuoteModal('ground-help-clean')}
                   className="w-full bg-[#8ce03f] hover:bg-[#7ecc34] text-[#141f17] font-bold py-2.5 rounded-xl text-xs transition-colors shadow"
                 >
-                  Book Deep Clean
+                  Join Waitlist (Deep Clean)
                 </button>
               </div>
             </div>
@@ -259,7 +259,7 @@ export default function GroundHelpCleanPage({ onOpenQuoteModal, onNavigate }) {
                   onClick={() => onOpenQuoteModal('ground-help-clean')}
                   className="w-full bg-[#141f17] hover:bg-[#1f3124] text-white font-bold py-2.5 rounded-xl text-xs transition-colors"
                 >
-                  Book Move-In/Out Clean
+                  Join Waitlist (Move-In/Out)
                 </button>
               </div>
             </div>
@@ -324,13 +324,13 @@ export default function GroundHelpCleanPage({ onOpenQuoteModal, onNavigate }) {
             <div className="space-y-3 max-w-2xl">
               <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-[#8ce03f] text-[#141f17] text-xs font-bold uppercase tracking-wider">
                 <HeartHandshake className="w-4 h-4" />
-                <span>The Ground Help Bundle Advantage</span>
+                <span>The GroundHelp Bundle Advantage</span>
               </div>
               <h3 className="text-3xl font-extrabold tracking-tight">
                 Save 10% on Lawn Care When You Bundle Cleaning!
               </h3>
               <p className="text-sm text-slate-700 leading-relaxed">
-                Why juggle two different contractors, two phone calls, and two different invoices? When you use Ground Help for your weekly or bi-weekly lawn care and GroundHelpClean for your home maid service, we discount your recurring lawn care by 10%.
+                Why juggle two different contractors, two phone calls, and two different invoices? When you use GroundHelp for your weekly or bi-weekly lawn care and GroundHelpClean for your home maid service, we discount your recurring lawn care by 10%.
               </p>
             </div>
 
@@ -338,7 +338,7 @@ export default function GroundHelpCleanPage({ onOpenQuoteModal, onNavigate }) {
               onClick={() => onOpenQuoteModal('ground-help-clean')}
               className="bg-[#141f17] hover:bg-[#1f3124] text-white font-bold px-7 py-3.5 rounded-xl text-sm transition-all shadow-md whitespace-nowrap"
             >
-              Get Bundled Quote Now
+              Join Waitlist & Save 10%
             </button>
           </div>
         </div>

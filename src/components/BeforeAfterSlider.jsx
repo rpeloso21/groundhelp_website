@@ -5,7 +5,7 @@ export default function BeforeAfterSlider({
   beforeImage,
   afterImage,
   beforeLabel = 'Before',
-  afterLabel = 'After Ground Help',
+  afterLabel = 'After GroundHelp',
   title = 'Real Midlands Transformations',
   subtitle = 'Drag the slider to reveal the difference professional lawn care and pressure washing makes.'
 }) {

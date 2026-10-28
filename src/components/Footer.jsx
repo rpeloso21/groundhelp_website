@@ -42,7 +42,7 @@ export default function Footer({ onNavigate, onOpenQuoteModal }) {
             <div className="flex items-center space-x-2.5">
               <img 
                 src="/images/groundhelp-logo-dark.png" 
-                alt="Ground Help - Lexington, SC" 
+                alt="GroundHelp - Lexington, SC" 
                 className="h-9 sm:h-10 w-auto object-contain" 
               />
             </div>
@@ -142,7 +142,7 @@ export default function Footer({ onNavigate, onOpenQuoteModal }) {
               <li className="pt-2 border-t border-[#233528]">
                 <button onClick={() => onNavigate('cleaning')} className="text-[#8ce03f] font-semibold hover:underline text-left flex items-center">
                   <Sparkles className="w-3.5 h-3.5 mr-1" />
-                  GroundHelpClean (Indoor)
+                  GroundHelpClean (Coming Soon)
                 </button>
               </li>
               <li>
@@ -186,7 +186,7 @@ export default function Footer({ onNavigate, onOpenQuoteModal }) {
 
         {/* Bottom Credits & Legal */}
         <div className="mt-12 pt-8 border-t border-[#233528] flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
-          <p>© {new Date().getFullYear()} Ground Help LLC. All rights reserved. Locally owned in Lexington, SC.</p>
+          <p>© {new Date().getFullYear()} GroundHelp LLC. All rights reserved. Locally owned in Lexington, SC.</p>
           <div className="flex items-center space-x-4">
             <span className="flex items-center text-slate-400">
               <ShieldCheck className="w-3.5 h-3.5 text-[#8ce03f] mr-1" />

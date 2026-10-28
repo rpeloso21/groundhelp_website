@@ -13,23 +13,23 @@ export default function GroundHelpCleanBanner({ onNavigateToClean, onOpenQuoteMo
 
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Top Division Badge */}
-        <div className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-[#8ce03f]/20 border border-[#8ce03f]/40 text-[#8ce03f] text-xs font-bold uppercase tracking-wider mb-6">
-          <Sparkles className="w-4 h-4 animate-pulse text-[#8ce03f]" />
-          <span>Independent Residential Division • Dedicated Cleaning Crew</span>
+        <div className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-amber-400/20 border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider mb-6">
+          <Sparkles className="w-4 h-4 animate-pulse text-amber-300" />
+          <span>🚀 Coming Soon • Independent Residential Interior Division</span>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Left Column: Story & Distinction */}
           <div className="lg:col-span-7 space-y-5">
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
-              Meet <span className="text-[#8ce03f]">GroundHelpClean</span>.
+              Coming Soon: <span className="text-[#8ce03f]">GroundHelpClean</span>.
               <span className="block text-2xl sm:text-3xl font-semibold text-slate-200 mt-1">
                 Your Yard & Home Handled Under One Roof.
               </span>
             </h2>
 
             <p className="text-slate-300 text-base leading-relaxed">
-              We know homeowners love having their lawn pristine, but keeping the inside spotless takes just as much time. That’s why we created <strong className="text-white">GroundHelpClean</strong>: an additional, dedicated residential cleaning service with a <strong className="text-[#8ce03f]">strictly separate indoor crew</strong>.
+              We know homeowners love having their lawn pristine, but keeping the inside spotless takes just as much time. That’s why we’re launching <strong className="text-white">GroundHelpClean</strong>: an upcoming residential cleaning service with a <strong className="text-[#8ce03f]">strictly separate, vetted indoor crew</strong>. Our team is currently preparing and training to bring you five-star interior home care.
             </p>
 
             {/* Crucial Crew Separation Guarantees */}
@@ -57,15 +57,16 @@ export default function GroundHelpCleanBanner({ onNavigateToClean, onOpenQuoteMo
                 onClick={onNavigateToClean}
                 className="bg-[#8ce03f] hover:bg-[#7ecc34] active:bg-[#6eb828] text-[#141f17] font-bold px-6 py-3 rounded-xl text-sm transition-all shadow-lg flex items-center space-x-2"
               >
-                <span>Explore GroundHelpClean</span>
+                <span>Learn About GroundHelpClean</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
 
               <button
                 onClick={() => onOpenQuoteModal('ground-help-clean')}
-                className="bg-[#1f3d2a] hover:bg-[#284f37] border border-[#386b4a] text-white font-semibold px-5 py-3 rounded-xl text-sm transition-all"
+                className="bg-[#1f3d2a] hover:bg-[#284f37] border border-[#386b4a] text-amber-300 font-semibold px-5 py-3 rounded-xl text-sm transition-all flex items-center space-x-1.5"
               >
-                Get Cleaning Estimate
+                <Sparkles className="w-4 h-4" />
+                <span>Join Launch Waitlist</span>
               </button>
             </div>
           </div>
@@ -146,8 +147,8 @@ export default function GroundHelpCleanBanner({ onNavigateToClean, onOpenQuoteMo
             )}
 
             <div className="mt-5 pt-3 border-t border-[#213f2a] flex items-center justify-between text-xs">
-              <span className="text-slate-400">Lexington & Lake Murray rate:</span>
-              <span className="text-[#8ce03f] font-bold">From $135 / clean</span>
+              <span className="text-slate-400">Launch Status:</span>
+              <span className="text-amber-300 font-bold bg-amber-400/10 px-2.5 py-1 rounded-full border border-amber-400/20">Coming Soon — Waitlist Open</span>
             </div>
           </div>
         </div>

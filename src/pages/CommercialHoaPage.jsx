@@ -337,7 +337,7 @@ export default function CommercialHoaPage({ onOpenQuoteModal }) {
                 RFP Received, {rfpForm.contactName}!
               </h3>
               <p className="text-sm text-slate-600 max-w-md mx-auto">
-                Thank you for considering Ground Help for {rfpForm.organizationName}. Our commercial grounds estimator will contact you within 24 hours to schedule an on-site property walkthrough.
+                Thank you for considering GroundHelp for {rfpForm.organizationName}. Our commercial grounds estimator will contact you within 24 hours to schedule an on-site property walkthrough.
               </p>
               <button
                 onClick={() => setRfpSubmitted(false)}

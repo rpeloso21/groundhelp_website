@@ -184,7 +184,7 @@ export default function InstantQuoteCard({ initialService = 'lawn-maintenance', 
                 <option value="lawn-maintenance">Lawn Maintenance (Mow, Edge, Trim, Blow)</option>
                 <option value="landscape-seasonal">Landscape & Seasonal (Pine Straw / Mulch / Aeration)</option>
                 <option value="exterior-cleaning">Exterior Cleaning (House Soft Wash / Pressure Wash)</option>
-                <option value="ground-help-clean">GroundHelpClean (Dedicated Interior Maid Service)</option>
+                <option value="ground-help-clean">GroundHelpClean (Coming Soon - Join Waitlist)</option>
                 <option value="commercial-hoa">Commercial Grounds & HOA Maintenance</option>
                 <option value="christmas-lights">Holiday & Christmas Light Installation</option>
               </select>
@@ -239,9 +239,9 @@ export default function InstantQuoteCard({ initialService = 'lawn-maintenance', 
                 <label htmlFor="bundle-cleaning" className="text-xs text-[#1e3b12] cursor-pointer">
                   <span className="font-bold flex items-center">
                     <Sparkles className="w-3.5 h-3.5 mr-1 text-[#468c22]" />
-                    Bundle GroundHelpClean (Save 10%)
+                    Bundle GroundHelpClean (Coming Soon - Join Waitlist)
                   </span>
-                  Add our dedicated interior home cleaning crew to your service plan.
+                  Add our upcoming interior home cleaning crew to reserve 10% priority launch savings.
                 </label>
               </div>
             )}
@@ -380,7 +380,7 @@ export default function InstantQuoteCard({ initialService = 'lawn-maintenance', 
           </div>
 
           <p className="text-xs text-slate-500">
-            Thank you, {formData.name.split(' ')[0]}! We have received your request. A Ground Help specialist will verify your lot via GIS mapping and email your finalized proposal within 2 hours.
+            Thank you, {formData.name.split(' ')[0]}! We have received your request. A GroundHelp specialist will verify your lot via GIS mapping and email your finalized proposal within 2 hours.
           </p>
 
           <button

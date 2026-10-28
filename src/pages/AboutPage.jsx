@@ -12,7 +12,7 @@ export default function AboutPage({ onOpenQuoteModal, onNavigate }) {
             Locally Owned in Lexington, SC
           </span>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight mt-3">
-            About Ground Help
+            About GroundHelp
           </h1>
           <p className="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed">
             Founded with a straightforward mission: provide Lexington and Lake Murray homeowners with unmatched lawn care and trustworthy, dedicated home cleaning.
@@ -30,7 +30,7 @@ export default function AboutPage({ onOpenQuoteModal, onNavigate }) {
                 South Carolina's Midlands climate creates unique demands for homeowners. Between intense summer humidity, resilient warm-season turf types (Bermuda, Centipede, Zoysia), and stubborn exterior green algae, keeping a home looking its best takes constant work.
               </p>
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                Ground Help was built to solve this entire challenge under one reputable, local roof. We maintain professional outdoor landscaping crews who pride themselves on crisp 90-degree sidewalk edges and striped lawns, while operating an independent indoor division — <strong>GroundHelpClean</strong> — with background-checked specialists dedicated to spotless interiors.
+                GroundHelp was built to solve this entire challenge under one reputable, local roof. We maintain professional outdoor landscaping crews who pride themselves on crisp 90-degree sidewalk edges and striped lawns, while operating an independent indoor division — <strong>GroundHelpClean</strong> — with background-checked specialists dedicated to spotless interiors.
               </p>
 
               <div className="pt-2 flex flex-wrap gap-4">
@@ -83,7 +83,7 @@ export default function AboutPage({ onOpenQuoteModal, onNavigate }) {
 
         {/* CTA */}
         <div className="text-center bg-[#141f17] text-white rounded-3xl p-8 sm:p-12 shadow-xl">
-          <h3 className="text-3xl font-extrabold mb-3">Experience the Ground Help Difference</h3>
+          <h3 className="text-3xl font-extrabold mb-3">Experience the GroundHelp Difference</h3>
           <p className="text-slate-300 text-sm max-w-xl mx-auto mb-6">
             Get your instant quote today or speak directly with our Lexington customer support team.
           </p>

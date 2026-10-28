@@ -10,7 +10,7 @@ export default function Navbar({ activePage, setActivePage, onOpenQuoteModal }) 
     { label: 'Home', id: 'home' },
     { label: 'About Us', id: 'about' },
     { label: 'Residential', id: 'lawn' },
-    { label: 'GroundHelpClean', id: 'cleaning', badge: 'Dedicated Crew' },
+    { label: 'GroundHelpClean', id: 'cleaning', badge: 'Coming Soon' },
     { label: 'Commercial & HOA', id: 'commercial' },
     { label: 'Contact', id: 'contact' },
   ];
@@ -49,15 +49,15 @@ export default function Navbar({ activePage, setActivePage, onOpenQuoteModal }) 
 
       {/* Main navigation container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-        {/* Brand Logo - Official Ground Help Logo */}
+        {/* Brand Logo - Official GroundHelp Logo */}
         <button 
           onClick={() => handleNavClick('home')}
           className="flex items-center space-x-2 focus:outline-none group text-left py-1"
-          aria-label="Ground Help Home"
+          aria-label="GroundHelp Home"
         >
           <img 
             src="/images/groundhelp-logo-dark.png" 
-            alt="Ground Help - Lexington, SC" 
+            alt="GroundHelp - Lexington, SC" 
             className="h-9 sm:h-10 w-auto object-contain group-hover:opacity-90 transition-opacity" 
           />
         </button>
@@ -146,8 +146,8 @@ export default function Navbar({ activePage, setActivePage, onOpenQuoteModal }) 
                   <div>
                     <div className="font-semibold text-[#8ce03f] text-sm flex items-center">
                       GroundHelpClean
-                      <span className="ml-1.5 px-1.5 py-0.5 text-[10px] bg-[#8ce03f]/20 text-[#8ce03f] rounded font-bold uppercase">
-                        Indoor Crew
+                      <span className="ml-1.5 px-1.5 py-0.5 text-[10px] bg-amber-400/20 text-amber-300 rounded font-bold uppercase">
+                        Coming Soon
                       </span>
                     </div>
                     <div className="text-xs text-slate-300">Dedicated residential house cleaning</div>
@@ -176,8 +176,8 @@ export default function Navbar({ activePage, setActivePage, onOpenQuoteModal }) 
             className={`py-2 text-slate-200 hover:text-[#8ce03f] transition-colors flex items-center space-x-1.5 ${activePage === 'cleaning' ? 'text-[#8ce03f] font-semibold' : ''}`}
           >
             <span>GroundHelpClean</span>
-            <span className="px-1.5 py-0.5 text-[10px] bg-[#8ce03f]/20 text-[#8ce03f] rounded-full border border-[#8ce03f]/40 font-medium">
-              Indoor Crew
+            <span className="px-1.5 py-0.5 text-[10px] bg-amber-400/20 text-amber-300 rounded-full border border-amber-400/40 font-medium">
+              Coming Soon
             </span>
           </button>
 
@@ -239,7 +239,11 @@ export default function Navbar({ activePage, setActivePage, onOpenQuoteModal }) 
             >
               <span>{item.label}</span>
               {item.badge && (
-                <span className="text-[11px] px-2 py-0.5 bg-[#8ce03f]/20 text-[#8ce03f] rounded-full border border-[#8ce03f]/30">
+                <span className={`text-[11px] px-2 py-0.5 rounded-full border ${
+                  item.badge === 'Coming Soon'
+                    ? 'bg-amber-400/20 text-amber-300 border-amber-400/40'
+                    : 'bg-[#8ce03f]/20 text-[#8ce03f] border-[#8ce03f]/30'
+                }`}>
                   {item.badge}
                 </span>
               )}

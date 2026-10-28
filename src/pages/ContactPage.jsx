@@ -42,7 +42,7 @@ export default function ContactPage({ onOpenQuoteModal }) {
             Lexington, SC Customer Care
           </span>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight mt-3">
-            Get in Touch with Ground Help
+            Get in Touch with GroundHelp
           </h1>
           <p className="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed">
             Have questions about your lawn, soft washing, or scheduling our GroundHelpClean indoor maid team? We're here to help.
@@ -246,7 +246,7 @@ export default function ContactPage({ onOpenQuoteModal }) {
                     className="w-full bg-[#141f17] hover:bg-[#1f3124] text-white font-bold py-3.5 rounded-xl text-sm transition-all shadow-md flex items-center justify-center space-x-2"
                   >
                     <Send className="w-4 h-4 text-[#8ce03f]" />
-                    <span>Send Message to Ground Help</span>
+                    <span>Send Message to GroundHelp</span>
                   </button>
                 </form>
               </>
@@ -259,7 +259,7 @@ export default function ContactPage({ onOpenQuoteModal }) {
                   Message Sent, {contactForm.name}!
                 </h3>
                 <p className="text-sm text-slate-600 max-w-md mx-auto">
-                  Thank you for reaching out to Ground Help. We have received your inquiry and a Lexington team member will reply to {contactForm.email} within 2 hours during normal business hours.
+                  Thank you for reaching out to GroundHelp. We have received your inquiry and a Lexington team member will reply to {contactForm.email} within 2 hours during normal business hours.
                 </p>
                 <button
                   onClick={() => setFormSent(false)}
