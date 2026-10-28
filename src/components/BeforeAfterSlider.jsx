@@ -90,7 +90,7 @@ export default function BeforeAfterSlider({
 
       {/* Interactive Slider Container */}
       <div
-        className="relative w-full h-[320px] sm:h-[420px] rounded-2xl overflow-hidden select-none cursor-ew-resize border border-slate-300 shadow-inner group"
+        className="relative w-full h-[340px] sm:h-[480px] rounded-2xl overflow-hidden select-none cursor-ew-resize border border-slate-300 shadow-inner group"
         onMouseMove={handleSliderMove}
         onTouchMove={handleTouchMove}
       >
@@ -99,18 +99,18 @@ export default function BeforeAfterSlider({
           className="absolute inset-0 w-full h-full bg-cover bg-center flex items-center justify-end p-6"
           style={{
             backgroundImage: activeProject === 'lawn' 
-              ? 'url("/images/top-down-lawn.jpeg")' 
+              ? 'url("/images/Lawn-After.jpg")' 
               : 'url("/images/pressure-washing.jpeg")',
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none"></div>
           <span className="relative z-10 px-3 py-1.5 bg-[#8ce03f] text-[#141f17] font-extrabold text-xs rounded-lg shadow-lg flex items-center space-x-1">
             <Sparkles className="w-3.5 h-3.5 text-[#141f17]" />
             <span>{afterLabel}: {current.afterTag}</span>
           </span>
         </div>
 
-        {/* Overlaid: The "Before" State, clipped by the slider position */}
+        {/* Overlaid: The "Before" State, clipped by the slider position (100% natural, no filters) */}
         <div
           className="absolute inset-0 h-full overflow-hidden flex items-center justify-start p-6"
           style={{ 
@@ -118,18 +118,17 @@ export default function BeforeAfterSlider({
             borderRight: '3px solid #8ce03f'
           }}
         >
-          {/* Mirrored background with darker, grungier filter */}
+          {/* Natural before image - 100% unedited for lawn */}
           <div 
-            className="absolute inset-0 w-full h-full bg-cover bg-center filter sepia brightness-[0.75] contrast-[0.9]"
+            className={`absolute inset-0 w-full h-full bg-cover bg-center ${activeProject === 'wash' ? 'filter brightness-[0.75] contrast-[0.9]' : ''}`}
             style={{
               backgroundImage: activeProject === 'lawn' 
-                ? 'url("/images/top-down-lawn.jpeg")' 
+                ? 'url("/images/Lawn-Before.jpg")' 
                 : 'url("/images/pressure-washing.jpeg")',
               width: '100%',
               minWidth: '100%',
             }}
           ></div>
-          <div className="absolute inset-0 bg-amber-950/40 mix-blend-multiply"></div>
           
           <span className="relative z-10 px-3 py-1.5 bg-slate-900/90 text-white font-bold text-xs rounded-lg shadow-lg backdrop-blur-sm border border-white/20">
             {beforeLabel}: {current.beforeTag}
