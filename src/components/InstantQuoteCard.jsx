@@ -60,6 +60,11 @@ export default function InstantQuoteCard({ initialService = 'lawn-maintenance', 
       }
     } else if (formData.serviceType === 'commercial-hoa') {
       baseMin = 350; baseMax = 950;
+    } else if (formData.serviceType === 'christmas-lights') {
+      baseMin = 450; baseMax = 850;
+      if (formData.propertySize === 'large' || formData.propertySize === 'estate') {
+        baseMin = 850; baseMax = 1650;
+      }
     }
 
     let bundleSavings = 0;
@@ -181,6 +186,7 @@ export default function InstantQuoteCard({ initialService = 'lawn-maintenance', 
                 <option value="exterior-cleaning">Exterior Cleaning (House Soft Wash / Pressure Wash)</option>
                 <option value="ground-help-clean">GroundHelpClean (Dedicated Interior Maid Service)</option>
                 <option value="commercial-hoa">Commercial Grounds & HOA Maintenance</option>
+                <option value="christmas-lights">Holiday & Christmas Light Installation</option>
               </select>
             </div>
 

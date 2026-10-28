@@ -101,6 +101,21 @@ export default function Footer({ onNavigate, onOpenQuoteModal }) {
                   Warm-Season Turf Care
                 </button>
               </li>
+              <li>
+                <button 
+                  onClick={() => {
+                    onNavigate('home');
+                    setTimeout(() => {
+                      const el = document.getElementById('holiday-lights-section');
+                      if (el) el.scrollIntoView({ behavior: 'smooth' });
+                    }, 150);
+                  }} 
+                  className="hover:text-[#8ce03f] transition-colors text-left flex items-center text-amber-200"
+                >
+                  <span className="text-amber-300 mr-1.5">✨</span>
+                  Christmas Light Hanging
+                </button>
+              </li>
             </ul>
           </div>
 

@@ -21,9 +21,9 @@ export const companyConfig = {
     "Gilbert"
   ],
   stats: [
-    { label: "Active Yards Serviced", value: "450+" },
-    { label: "5-Star Local Reviews", value: "180+" },
-    { label: "Lexington SC Local", value: "100%" },
+    { label: "Google Customer Rating", value: "5.0 ★" },
+    { label: "Satisfaction Guaranteed", value: "100%" },
+    { label: "Lexington & Lake Murray", value: "Local" },
     { label: "Dedicated Crews", value: "2 Divisions" }
   ],
   services: {
@@ -113,28 +113,44 @@ export const companyConfig = {
         "Detailed digital billing, proof-of-work reporting, and dedicated account manager"
       ],
       startingAt: "Custom Bid / Contract"
+    },
+    christmasLights: {
+      id: "christmas-lights",
+      title: "Holiday & Christmas Light Installation",
+      shortTitle: "Christmas Lights",
+      category: "Seasonal Services",
+      headline: "Custom-fit commercial LED lighting, professional installation, in-season maintenance, and post-holiday removal.",
+      description: "Take the hazard and hassle out of the holidays. Ground Help provides complete, professional Christmas lighting solutions for Lexington homes and businesses — custom cut to your roofline, safely installed, maintained all season, and neatly taken down and stored.",
+      features: [
+        "Custom commercial-grade LED lighting tailored to your roofline & gutters",
+        "All hardware, commercial extension cords, and automatic timers included",
+        "Free in-season maintenance (if a bulb goes out or a clip shifts, we fix it promptly)",
+        "Post-holiday removal and safe labeled storage for next year",
+        "Safe, fully insured installation (stay off the ladder!)"
+      ],
+      startingAt: "Free Custom Estimate"
     }
   },
   testimonials: [
     {
-      name: "Marcus & Sarah Jenkins",
-      neighborhood: "Golden Hills, Lexington, SC",
-      service: "Weekly Lawn Care & GroundHelpClean Bundle",
-      quote: "Having Ground Help manage our Bermuda lawn while their GroundHelpClean crew handles our bi-weekly house cleaning is a game changer. The lawn lines are razor sharp and having two professional crews we trust on one simple bill is unmatched.",
+      name: "Shawn French",
+      neighborhood: "Lexington, SC",
+      service: "Verified Google Review • Recurring Lawn Care",
+      quote: "GroundHelp has been great. They do a great job. I get an email each time before they come out and a follow up after. I don't have to think about my grass anymore! It has taken a stressful task and automated it for a reasonable price! I am so happy we have them!",
       rating: 5
     },
     {
-      name: "Brenda T.",
-      neighborhood: "Lake Murray / Chapin Area",
-      service: "House Soft Wash & Pine Straw Installation",
-      quote: "Our siding had that awful Midlands green algae buildup from the summer humidity. Ground Help soft washed the entire two-story house and refreshed our pine straw beds in a single morning. Looks like a brand new home!",
+      name: "Amanda Blankenship",
+      neighborhood: "Lexington, SC",
+      service: "Verified Google Review • Pool Owner Lawn Care",
+      quote: "GroundHelp has done a great job on our yard. I appreciate the email the night before service so I know to turn off the sprinklers. We have had issues with past lawn maintenance companies shooting a lot of clippings in our pool and there have been no clippings in our pool after switching to GroundHelp.",
       rating: 5
     },
     {
-      name: "Dave R., HOA President",
-      neighborhood: "Whiteford Community, Lexington",
-      service: "HOA Common Grounds & Neighborhood Program",
-      quote: "Ground Help has been maintaining our neighborhood entrances and common area parks for over two seasons. Prompt, professional, and our residents love the neighborhood group rate discount.",
+      name: "Luigi Calabrese",
+      neighborhood: "Lexington, SC",
+      service: "Verified Google Review • Customer Service",
+      quote: "Amazing service. Very responsive and thorough. Will use them, and recommend them to everyone I know!",
       rating: 5
     }
   ],

@@ -120,6 +120,28 @@ export default function Navbar({ activePage, setActivePage, onOpenQuoteModal }) 
                   </div>
                 </button>
 
+                <button
+                  onClick={() => {
+                    handleNavClick('home');
+                    setTimeout(() => {
+                      const el = document.getElementById('holiday-lights-section');
+                      if (el) el.scrollIntoView({ behavior: 'smooth' });
+                    }, 150);
+                  }}
+                  className="w-full text-left px-4 py-2.5 hover:bg-[#23382a] flex items-start space-x-3 transition-colors"
+                >
+                  <div className="w-5 h-5 rounded-md bg-[#2d4434] text-amber-300 flex items-center justify-center text-xs font-bold mt-0.5">✨</div>
+                  <div>
+                    <div className="font-semibold text-white text-sm flex items-center">
+                      Christmas Light Hanging
+                      <span className="ml-1.5 px-1.5 py-0.5 text-[9px] bg-amber-400/20 text-amber-300 rounded font-bold uppercase">
+                        Seasonal
+                      </span>
+                    </div>
+                    <div className="text-xs text-slate-400">Custom design, install & takedown</div>
+                  </div>
+                </button>
+
                 <div className="border-t border-[#263c2c] my-1"></div>
 
                 <button

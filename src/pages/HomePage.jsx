@@ -201,6 +201,86 @@ export default function HomePage({ onNavigate, onOpenQuoteModal }) {
       </section>
 
       {/* =========================================================================
+          SEASONAL SPOTLIGHT: HOLIDAY & CHRISTMAS LIGHT INSTALLATION
+      ========================================================================== */}
+      <section id="holiday-lights-section" className="py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-gradient-to-br from-[#1a271d] via-[#1f3325] to-[#142318] text-white rounded-3xl p-8 sm:p-12 border border-[#2d4934] shadow-2xl relative overflow-hidden">
+          <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-amber-400/10 blur-3xl pointer-events-none"></div>
+          <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-[#8ce03f]/10 blur-3xl pointer-events-none"></div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
+            <div className="lg:col-span-7 space-y-5">
+              <div className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-amber-400/20 border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider">
+                <span>✨ Seasonal Service • Limited Slots Available</span>
+              </div>
+
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
+                Professional Holiday & <br />
+                <span className="text-amber-300">Christmas Light</span> Installation
+              </h2>
+
+              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+                Take the hazard and hassle out of the holidays. Ground Help provides complete, hands-off holiday lighting for Lexington homes and businesses — custom cut to your roofline, safely installed, maintained all season, and neatly taken down and stored.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs text-slate-200">
+                <div className="flex items-start space-x-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#8ce03f] flex-shrink-0 mt-0.5" />
+                  <span><strong>Custom Commercial LEDs:</strong> Tailored to fit your gutters & roofline</span>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#8ce03f] flex-shrink-0 mt-0.5" />
+                  <span><strong>In-Season Maintenance:</strong> Free bulb replacement if one goes out</span>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#8ce03f] flex-shrink-0 mt-0.5" />
+                  <span><strong>Takedown & Storage:</strong> Labeled and packed away for next year</span>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#8ce03f] flex-shrink-0 mt-0.5" />
+                  <span><strong>100% Insured:</strong> Keep your family safely off high ladders</span>
+                </div>
+              </div>
+
+              <div className="pt-3 flex flex-wrap items-center gap-4">
+                <button
+                  onClick={() => onOpenQuoteModal('christmas-lights')}
+                  className="bg-[#8ce03f] hover:bg-[#7ecc34] text-[#141f17] font-bold px-6 py-3.5 rounded-xl text-sm transition-all shadow-md flex items-center space-x-2"
+                >
+                  <span>Get Holiday Light Quote</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+                <a
+                  href={`tel:${companyConfig.rawPhone}`}
+                  className="text-xs text-slate-300 hover:text-white font-semibold flex items-center"
+                >
+                  <Phone className="w-3.5 h-3.5 mr-1.5 text-amber-300" />
+                  Call {companyConfig.phone}
+                </a>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-400/30 group">
+                <img
+                  src="/images/Christmas-light-hanging.jpeg"
+                  alt="Professional Christmas light hanging and roofline lighting in Lexington SC"
+                  className="w-full h-80 sm:h-96 object-cover transform group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+                <div className="absolute bottom-4 left-4 right-4 bg-black/60 backdrop-blur-md rounded-xl p-3 border border-white/20 text-xs text-white">
+                  <div className="font-bold flex items-center text-amber-300 mb-0.5">
+                    <span>✨ Complete Hands-Off Service</span>
+                  </div>
+                  <span className="text-slate-300 text-[11px]">Design, Install, In-Season Maintenance, Takedown & Storage</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================================
           SECTION 3: EXTERIOR CLEANING & PRESSURE WASHING
       ========================================================================== */}
       <section className="bg-slate-900 text-white py-16 sm:py-24 relative overflow-hidden">

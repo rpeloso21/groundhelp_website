@@ -104,7 +104,7 @@ export default function LawnServicesPage({ onOpenQuoteModal, onNavigate }) {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200">
               <div className="text-3xl mb-3">🌲</div>
               <h4 className="text-lg font-bold text-slate-900 mb-2">SC Pine Straw & Mulch</h4>
@@ -144,6 +144,20 @@ export default function LawnServicesPage({ onOpenQuoteModal, onNavigate }) {
                 className="text-xs font-bold text-[#28581c] hover:underline"
               >
                 Request Aeration →
+              </button>
+            </div>
+
+            <div className="bg-amber-50/60 p-6 rounded-2xl border border-amber-200">
+              <div className="text-3xl mb-3">✨</div>
+              <h4 className="text-lg font-bold text-slate-900 mb-2">Christmas Light Hanging</h4>
+              <p className="text-xs text-slate-600 leading-relaxed mb-4">
+                Commercial LED lighting custom-cut to your roofline. Professional install, in-season maintenance, and post-holiday removal with organized storage.
+              </p>
+              <button
+                onClick={() => onOpenQuoteModal('christmas-lights')}
+                className="text-xs font-bold text-amber-800 hover:underline"
+              >
+                Request Holiday Quote →
               </button>
             </div>
           </div>
