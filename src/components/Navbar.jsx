@@ -49,23 +49,17 @@ export default function Navbar({ activePage, setActivePage, onOpenQuoteModal }) 
 
       {/* Main navigation container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-        {/* Brand Logo - exactly matching Mockup 1 */}
+        {/* Brand Logo - Official Ground Help Logo */}
         <button 
           onClick={() => handleNavClick('home')}
-          className="flex items-center space-x-2.5 focus:outline-none group text-left"
+          className="flex items-center space-x-2 focus:outline-none group text-left py-1"
           aria-label="Ground Help Home"
         >
-          <div className="w-10 h-10 rounded-full bg-[#8ce03f] flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
-            <Leaf className="w-6 h-6 text-[#141f17] fill-current" />
-          </div>
-          <div className="flex flex-col">
-            <span className="text-2xl font-bold tracking-tight text-white flex items-center">
-              Ground<span className="text-[#8ce03f]">Help</span>
-            </span>
-            <span className="text-[10px] uppercase tracking-wider text-slate-400 font-medium -mt-1">
-              Lexington, SC
-            </span>
-          </div>
+          <img 
+            src="/images/groundhelp-logo-dark.png" 
+            alt="Ground Help - Lexington, SC" 
+            className="h-9 sm:h-10 w-auto object-contain group-hover:opacity-90 transition-opacity" 
+          />
         </button>
 
         {/* Desktop Nav Links */}

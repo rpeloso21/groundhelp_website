@@ -40,12 +40,11 @@ export default function Footer({ onNavigate, onOpenQuoteModal }) {
           {/* Col 1: Brand Info */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center space-x-2.5">
-              <div className="w-9 h-9 rounded-full bg-[#8ce03f] flex items-center justify-center">
-                <Leaf className="w-5 h-5 text-[#141f17] fill-current" />
-              </div>
-              <span className="text-2xl font-bold tracking-tight text-white">
-                Ground<span className="text-[#8ce03f]">Help</span>
-              </span>
+              <img 
+                src="/images/groundhelp-logo-dark.png" 
+                alt="Ground Help - Lexington, SC" 
+                className="h-9 sm:h-10 w-auto object-contain" 
+              />
             </div>
 
             <p className="text-slate-300 text-sm leading-relaxed pr-6">
