@@ -11,6 +11,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   </head>
   <body class="bg-[#f8faf8] text-slate-800 antialiased selection:bg-[#8ce03f] selection:text-[#141f17]">
+    <!-- Hidden static forms for Netlify bot discovery in React SPA -->
+    <form name="quote-request" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="zipCode" />
+      <input type="text" name="serviceType" />
+      <input type="text" name="propertySize" />
+      <input type="text" name="frequency" />
+      <input type="checkbox" name="bundleCleaning" />
+      <input type="text" name="estimateBallpark" />
+      <input type="text" name="bot-field" />
+    </form>
+
+    <form name="contact-message" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="subject" />
+      <textarea name="message"></textarea>
+      <input type="text" name="bot-field" />
+    </form>
+
+    <form name="commercial-rfp" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="organizationName" />
+      <input type="text" name="contactName" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="propertyType" />
+      <input type="text" name="address" />
+      <textarea name="notes"></textarea>
+      <input type="text" name="bot-field" />
+    </form>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

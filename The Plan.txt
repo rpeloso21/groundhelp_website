@@ -1,0 +1,9 @@
+The Plan:
+
+1.  Open a New Draft in Wix
+
+
+2.  Build out a new Nav Bar
+
+
+3.  Build out a new Hero Section

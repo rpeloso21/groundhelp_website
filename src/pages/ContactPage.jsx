@@ -11,10 +11,26 @@ export default function ContactPage({ onOpenQuoteModal }) {
     subject: 'Lawn Care Inquiry',
     message: ''
   });
+  const [botField, setBotField] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFormSent(true);
+    if (botField) return;
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({
+        'form-name': 'contact-message',
+        'bot-field': botField,
+        ...contactForm
+      }).toString()
+    })
+      .then(() => setFormSent(true))
+      .catch((err) => {
+        console.error('Contact form error:', err);
+        setFormSent(true);
+      });
   };
 
   return (
@@ -134,7 +150,20 @@ export default function ContactPage({ onOpenQuoteModal }) {
                   Fill out the quick form below and our team will get back to you promptly.
                 </p>
 
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form 
+                  name="contact-message" 
+                  method="POST" 
+                  data-netlify="true" 
+                  data-netlify-honeypot="bot-field"
+                  onSubmit={handleSubmit} 
+                  className="space-y-4"
+                >
+                  <input type="hidden" name="form-name" value="contact-message" />
+                  <p className="hidden" aria-hidden="true">
+                    <label>
+                      Leave empty: <input name="bot-field" value={botField} onChange={(e) => setBotField(e.target.value)} />
+                    </label>
+                  </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-bold text-slate-700 uppercase mb-1">

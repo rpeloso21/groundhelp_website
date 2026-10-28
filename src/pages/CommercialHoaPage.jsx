@@ -14,10 +14,26 @@ export default function CommercialHoaPage({ onOpenQuoteModal }) {
     approxAcreage: '1-5',
     notes: ''
   });
+  const [botField, setBotField] = useState('');
 
   const handleRfpSubmit = (e) => {
     e.preventDefault();
-    setRfpSubmitted(true);
+    if (botField) return;
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({
+        'form-name': 'commercial-rfp',
+        'bot-field': botField,
+        ...rfpForm
+      }).toString()
+    })
+      .then(() => setRfpSubmitted(true))
+      .catch((err) => {
+        console.error('RFP form error:', err);
+        setRfpSubmitted(true);
+      });
   };
 
   return (
@@ -184,7 +200,20 @@ export default function CommercialHoaPage({ onOpenQuoteModal }) {
                 </p>
               </div>
 
-              <form onSubmit={handleRfpSubmit} className="space-y-4">
+              <form 
+                name="commercial-rfp" 
+                method="POST" 
+                data-netlify="true" 
+                data-netlify-honeypot="bot-field"
+                onSubmit={handleRfpSubmit} 
+                className="space-y-4"
+              >
+                <input type="hidden" name="form-name" value="commercial-rfp" />
+                <p className="hidden" aria-hidden="true">
+                  <label>
+                    Leave empty: <input name="bot-field" value={botField} onChange={(e) => setBotField(e.target.value)} />
+                  </label>
+                </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-bold text-slate-700 uppercase mb-1">

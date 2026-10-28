@@ -19,6 +19,14 @@ export default function InstantQuoteCard({ initialService = 'lawn-maintenance', 
 
   const [submitted, setSubmitted] = useState(false);
   const [estimateResult, setEstimateResult] = useState(null);
+  const [submitting, setSubmitting] = useState(false);
+  const [botField, setBotField] = useState('');
+
+  const encodeFormData = (data) => {
+    return Object.keys(data)
+      .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&');
+  };
 
   // Estimate calculation engine for Lexington SC area
   const calculateEstimate = () => {
@@ -73,20 +81,48 @@ export default function InstantQuoteCard({ initialService = 'lawn-maintenance', 
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (botField) return;
     const est = calculateEstimate();
     setEstimateResult(est);
-    setSubmitted(true);
+    setSubmitting(true);
 
-    try {
-      confetti({
-        particleCount: 80,
-        spread: 60,
-        origin: { y: 0.7 },
-        colors: ['#8ce03f', '#141f17', '#38bdf8', '#22c55e']
+    // Transmit lead to Netlify Forms via AJAX
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encodeFormData({
+        'form-name': 'quote-request',
+        'bot-field': botField,
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        zipCode: formData.zipCode,
+        serviceType: formData.serviceType,
+        propertySize: formData.propertySize,
+        frequency: formData.frequency,
+        bundleCleaning: formData.bundleCleaning ? 'Yes' : 'No',
+        estimateBallpark: `$${est.totalMin} - $${est.totalMax}`
+      })
+    })
+      .then(() => {
+        setSubmitting(false);
+        setSubmitted(true);
+        try {
+          confetti({
+            particleCount: 80,
+            spread: 60,
+            origin: { y: 0.7 },
+            colors: ['#8ce03f', '#141f17', '#38bdf8', '#22c55e']
+          });
+        } catch (err) {
+          // ignore
+        }
+      })
+      .catch((err) => {
+        console.error('Netlify form submission error:', err);
+        setSubmitting(false);
+        setSubmitted(true);
       });
-    } catch (err) {
-      // safe fallback if canvas is unavailable
-    }
   };
 
   const handleReset = () => {
@@ -113,7 +149,20 @@ export default function InstantQuoteCard({ initialService = 'lawn-maintenance', 
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-3.5">
+          <form 
+            name="quote-request"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onSubmit={handleSubmit} 
+            className="space-y-3.5"
+          >
+            <input type="hidden" name="form-name" value="quote-request" />
+            <p className="hidden" aria-hidden="true">
+              <label>
+                Leave empty: <input name="bot-field" value={botField} onChange={(e) => setBotField(e.target.value)} />
+              </label>
+            </p>
             {/* Service Type Selection */}
             <div>
               <label htmlFor="quote-service" className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
