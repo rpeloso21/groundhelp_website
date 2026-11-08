@@ -58,7 +58,7 @@ export const companyConfig = {
         "Core aeration & warm-season nutrient conditioning",
         "Spring & fall leaf cleanouts and storm yard cleanups"
       ],
-      startingAt: "$120 / service"
+      startingAt: "$150 / service"
     },
     exteriorCleaning: {
       id: "exterior-cleaning",
@@ -74,7 +74,7 @@ export const companyConfig = {
         "Pool deck, patio paver, and retaining wall restoration",
         "Biodegradable, plant-safe cleaning agents"
       ],
-      startingAt: "$175 / house wash"
+      startingAt: "Min. $150 (Flat) / $275 (House)"
     },
     groundHelpClean: {
       id: "ground-help-clean",
@@ -178,3 +178,4 @@ export const companyConfig = {
     }
   ]
 };
+
