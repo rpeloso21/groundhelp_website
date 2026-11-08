@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Calculator, CheckCircle2, Sparkles, ArrowRight, ShieldCheck, Home, Trees, Droplets } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { companyConfig } from '../data/companyConfig';
+import { logQuoteLead } from '../utils/analytics';
 
 export default function InstantQuoteCard({ initialService = 'lawn-maintenance', compact = false }) {
   const [step, setStep] = useState(1);
@@ -90,6 +91,21 @@ export default function InstantQuoteCard({ initialService = 'lawn-maintenance', 
     const est = calculateEstimate();
     setEstimateResult(est);
     setSubmitting(true);
+
+    // Save lead to Supabase cloud database
+    logQuoteLead({
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      zipCode: formData.zipCode,
+      serviceType: formData.serviceType,
+      propertySize: formData.propertySize,
+      frequency: formData.frequency,
+      bundleCleaning: formData.bundleCleaning,
+      estimateRange: `$${est.totalMin} - $${est.totalMax}`,
+      estimateMin: est.totalMin,
+      estimateMax: est.totalMax
+    });
 
     // Transmit lead to Netlify Forms via AJAX
     fetch('/', {

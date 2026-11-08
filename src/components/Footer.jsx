@@ -1,5 +1,5 @@
 import React from 'react';
-import { Leaf, Phone, Mail, MapPin, Clock, ShieldCheck, Heart, Sparkles } from 'lucide-react';
+import { Leaf, Phone, Mail, MapPin, Clock, ShieldCheck, Heart, Sparkles, Lock } from 'lucide-react';
 import { companyConfig } from '../data/companyConfig';
 
 export default function Footer({ onNavigate, onOpenQuoteModal }) {
@@ -198,9 +198,14 @@ export default function Footer({ onNavigate, onOpenQuoteModal }) {
             <button onClick={() => onNavigate('contact')} className="hover:underline">
               Terms of Service
             </button>
+            <button onClick={() => onNavigate('admin')} className="hover:text-slate-200 transition-colors opacity-60 hover:opacity-100 flex items-center ml-2" title="Site Performance & Leads">
+              <Lock className="w-3 h-3 mr-1" />
+              <span>Owner Portal</span>
+            </button>
           </div>
         </div>
       </div>
     </footer>
   );
 }
+
